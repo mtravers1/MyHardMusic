@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="./app.css"
+    </head>
+    <body>
+        <div>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="./home.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./new.html">Hip Hop News</a>
+                    </li>
+                    <li>
+                        <a href="">Upcomming Events</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <h2>Latest</h2>
+        <div id="latest">
+
+
+        </div>
+        <script>
+            $(document).ready(function(){
+                let news=[
+                {id:1, title:"Tory Lanez is innocent", description:"A video has surfaces where it appears that tory lanez didnt shoot megan, It was actually Tupac who arose from the ground where he was on his way to smash Jada Pinket Smith", date:12-12-12},
+                {id:2, title:"Ice Spice got that Donkey on her", description:"Ice Spice twerk video is causing chaos in the black woman community as a Light skin bitch ass is way thicker than the chocolate bithes", date:12-12-12}
+            ]
+
+            let latest=$("#latestnews")
+
+
+
+
+            $.each(news, function(key, value){
+                $("#latest").append('<p>'+value.title+'<p><p>'+value.description+'</p>')
+            })
+
+            })
+            
+        </script>
+
+    </body>
+    
+</html>

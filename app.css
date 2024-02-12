@@ -1,0 +1,28 @@
+#nav{
+    background-color: bisque;
+}
+
+
+#nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav li{
+    list-style:none;
+
+}
+
+#nav a{
+    text-decoration: none;
+    color:black;
+}
+
+#nav a:hover{
+    color:aqua
+}
+
+#footer{
+    background-color: black;
+    color: white;
+}

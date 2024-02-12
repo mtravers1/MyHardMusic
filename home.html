@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="app.css"/></link>
+    </head>
+    <body>
+        <div>
+            <div>
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="./home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="./new.html">Hip Hop News</a>
+                        </li>
+                        <li>
+                            <a href="">Upcomming Events</a>
+                        </li>
+                        <li>
+                            <a href="">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        <h1 id="title">MyHardMusic</h1>
+        <h2>Top Trending</h2>
+        <div id="trending">
+
+        </div>
+        <div>
+            <h2>New Releases</h2>
+            <div id="new">
+
+            </div>
+        </div>
+
+        <footer>
+            <div id="footer">
+                <h2>Contact</h2>
+                <p>Phone: 281-330-8004</p>
+                <p>Email:dameatis_long@gmail.com</p>
+            </div>
+        </footer>
+
+
+
+    </div>
+       
+        <script>
+            const url="http://localhost:8080"
+            fetch(url)
+            .then(res=>res.json())
+            .then(data=>console.log(data))
+
+        </script>
+        <script>
+            $(document).ready(function(){
+                console.log("jquery is working")
+                $("#title").css({color:"red"})
+
+            
+            })
+            let trending=[
+            {id:1,song:"Sunday Service",artist:"Latto",album:"Single",year:2024,link:"Link"},
+            {id:2,song:"Think you the shit",artist:"Ice Spice",album:"Single",year:2024,link:"Link"},
+            {id:3,song:"Go Crazy",artist:"Young Jeezy",album:"Single",year:2010,link:"Link"}]
+            $(document).ready(function(){
+
+                $.each(trending, function(trend, i){
+                    $("#trending").append('<p>'+i.song+'</p><p>'+i.artist+'</p></br>')
+                })
+            })
+
+            $.each(trending, function(k, v){
+                $("#new").append('<p>'+v.song+'</p><p>'+v.artist+'</p></br>')
+            })
+        </script>
+    </body>
+</html>
