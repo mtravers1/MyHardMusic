@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div>
+        
+        <h1>Add New Music</h1>
+        <form>
+            <label>Song</label>
+            <input
+            type="text"
+            id="song"
+            />
+            <label>Artist</label>
+            <input
+            type="text"
+            id="artist"
+            />
+            <label>Album</label>
+            <input
+            type="text"
+            id="album"
+            />
+            <label>Year</label>
+            <input
+            type="text"
+            id="year"
+            />
+            <label>Link</label>
+            <input
+            type="text"
+            id="link"
+            />
+            <button type="submit" id="button">Submit</button>
+        </form>
+        <h1>All Songs</h1>
+        <div id="music">
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            let track=[]
+            $("#button").click(function(e){
+            e.preventDefault();
+            let song=$("#song").val()
+            let artist=$("#artist").val()
+            let album=$("#album").val()
+            let year=$("#year").val()
+            let link=$("#link").val()
+            let newsong={song, artist, album, year, link}
+
+            track.push(newsong)
+            console.log(track)
+            $("#music").append('<p>'+[track]+'</p>')
+            })
+            
+        })
+    </script>
+</body>
+</html>
